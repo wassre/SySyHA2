@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>To Do</title>
+    <link rel="stylesheet"href="css/bootstrap.css">
+    <script src="js/bootstrap.js"></script>
+    <style>
+      body {
+      padding: 50px;
+      background-color: #F5F5F5;
+	  width:95%;
+      margin-left:auto;
+      margin-right:auto;
+      }
+      table {
+      background-color: #FFFFFF;
+      border-collapse: collapse;
+      width: 100%;
+      border: thin solid gainsboro;
+      }
+      td, th {
+      text-align: left;
+      padding: 8px;
+      }
+      #colCheck { width: 0px }
+      #colProgress { width: 90px }
+      #colDate { width: 120px }
+      #colButtons { width: 87px }
+      .addBtn {
+      padding: 0px;
+      width: 60px;
+      background: transparent;
+      color: #666666;
+      float: right;
+      text-align: center;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+      border-radius: 17px;
+	  border-color: transparent;
+      margin: 7px;
+      }
+      th, caption {
+      background-color: #D8E7FD;
+      font-weight: 700;
+      }
+      .footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      padding: 15px 0px 0px 20px; 
+      width: 100%;
+      background-color: #D8E7FD;
+      color: black;
+      text-align: center;
+      }
+      .footer-left {
+      display: inline-block;
+      text-align: left;
+      width:80%;
+      }
+      .footer-right{
+      vertical-align:top;
+      display: inline-block;
+      text-align: right;
+      }
+	  .btn-outline-primary {
+	  color: black;
+	  font-size: 16px;
+	  border-color: transparent;
+	  }
+	  .btn-outline-primary:hover {
+	  color: black;
+	  background-color: #C5DBFC;
+	  border-color: #8BB7F9;
+	  }
+    </style>
+  </head>
+  <body>
+    <h1>To Do List</h1>
+    <br>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div><button class="addBtn" onclick="window.location.href='todo_new.html';"><i class="fa fa-plus"></i> Add</button></div>
+    <div>
+      <table>
+        <colgroup>
+          <col id="colCheck">
+          <col>
+          <col id="colDate">
+          <col id="colProgress">
+          <col id="colButtons">
+        </colgroup>
+        <tr>
+          <th></th>
+          <th>Todo</th>
+          <th>Deadline</th>
+          <th>Progress</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="checkbox" id="scales" name=""
+            unchecked></td>
+          <td>160 Zeichen Beispieltext:</td>
+          <td>25. April 2022</td>
+          <td>20% </td>
+          <td>
+            <div class="btn-group btn-group-sm" role="group" aria-label="Basic outlined example">
+              <button type="normalBtn" class="btn btn-outline-primary" onclick="window.location.href='todo_edit.html';"><i class="fa fa-pencil fa-fw"></i></button>
+              <button type="normalBtn" class="btn btn-outline-primary"><i class="fa fa-trash fa-fw"></i></button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" id="scales" name=""
+            unchecked></td>
+          <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient.</td>
+          <td>03. Mai 2022</td>
+          <td>0% </td>
+          <td>
+            <div class="btn-group btn-group-sm" role="group" aria-label="Basic outlined example">
+              <button type="normalBtn" class="btn btn-outline-primary" onclick="window.location.href='todo_edit.html';"><i class="fa fa-pencil fa-fw"></i></button>
+              <button type="normalBtn" class="btn btn-outline-primary"><i class="fa fa-trash fa-fw"></i></button>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+  <div class="footer">
+    <div class="footer-left">
+       <p>Copyright © 2022, All Rights Reserved</p>
+    </div>
+    <div class="footer-right">
+       <p><button type="button" class="btn" onclick="window.location.href='impressum.html';"><i class="fa fa-address-card"></i> Impressum</button></p>
+    </div>
+  </div>
+</html>
+
