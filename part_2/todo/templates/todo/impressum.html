@@ -1,56 +1,13 @@
 {% extends 'todo/base.html' %}
-<head>
-    {% block title %}Home{% endblock %}
-	</script>
-	<style>
-	     body {
-	     padding: 50px;
-	     background-color: #F5F5F5;
-	     width:95%;
-	     margin-left:auto;
-	     margin-right:auto;
-	     }
-	     .footer {
-	     position: fixed;
-	     left: 0;
-	     width: 100%;
-	     bottom: 0;
-	     padding: 15px 0px 0px 20px; 
-	     background-color: #D8E7FD;
-	     color: black;
-	     text-align: center;
-	     }
-	     .footer-left {
-	     display: inline-block;
-	     text-align: left;
-	     width:80%;
-	     }
-	     .footer-right{
-	     vertical-align:top;
-	     display: inline-block;
-	     text-align: right;
-	     }
-	     .btn-outline-primary {
-	     color: black;
-	     font-size: 16px;
-	     border-color: transparent;
-	     }
-	     .btn-outline-primary:hover {
-	     color: black;
-	     background-color: #C5DBFC;
-	     border-color: #8BB7F9;
-	     }
-	</style>
-</head>
-    {% block body %}
-        <h1>Impressum</h1>
-        <p><br>
-        Alexander Tambunan , MA-Nummer: 393853<br>
-        Miriam Richter, MA-Nummer: 411908</p>
-        <br>
-        <p>
-            <strong>Icons:</strong><br>
-            <a href="https://fontawesome.com/">Font Awesome</a>,  CC BY 4.0 License
-        </p>
-    {% endblock %}
-</html>
+{% block title %}Home{% endblock %}
+{% block body %}
+    <h1>Impressum</h1>
+    <p><br>
+    Alexander Tambunan , MA-Nummer: 393853<br>
+    Miriam Richter, MA-Nummer: 411908</p>
+    <br>
+    <p>
+        <strong>Icons:</strong><br>
+        <a href="https://fontawesome.com/">Font Awesome</a>,  CC BY 4.0 License
+    </p>
+{% endblock %}
