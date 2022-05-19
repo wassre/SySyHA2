@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body {
+            padding: 50px;
+            background-color: #F5F5F5;
+            width:95%;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        table {
+            background-color: #FFFFFF;
+            border-collapse: collapse;
+            width: 100%;
+            border: thin solid gainsboro;
+        }
+    </style>
+</head>
+<body>
+<div id="body", name="body">
+    {% block body %}
+    default
+    {% endblock %}
+</div>
+
+FOOTER
+</body>
+</html>
