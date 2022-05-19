@@ -20,10 +20,36 @@
         background-color: #D8E7FD;
         font-weight: 700;
         }
+        .addBtn {
+        padding: 0px;
+        width: 60px;
+        background: transparent;
+        color: #666666;
+        float: right;
+        text-align: center;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+        border-radius: 17px;
+        border-color: transparent;
+        margin: 7px;
+        }
+        .btn-outline-primary {
+        color: black;
+        font-size: 16px;
+        border-color: transparent;
+        }
+        .btn-outline-primary:hover {
+        color: black;
+        background-color: #C5DBFC;
+        border-color: #8BB7F9;
+        }
     {% endblock %}
 </head>
 {% block body %}
 <h1>ToDo-List</h1>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div><button class="addBtn" onclick="window.location.href='todo_new.html';"><i class="fa fa-plus"></i> Add</button></div>
 <div>
     <table>
         <colgroup>
@@ -50,7 +76,12 @@
                 <td>{{item.task}}</td>
                 <td>{{item.deadline}}</td>
                 <td>{{item.progress}}</td>
-                <td>Buttons</td>
+                <td>
+                    <div class="btn-group btn-group-sm" role="group" aria-label="Basic outlined example">
+                        <button type="normalBtn" class="btn btn-outline-primary" onclick="window.location.href='todo_edit.html';"><i class="fa fa-pencil fa-fw"></i></button>
+                        <button type="normalBtn" class="btn btn-outline-primary"><i class="fa fa-trash fa-fw"></i></button>
+                    </div>
+                </td>
             </tr>
         {% endfor %}
     </table>
