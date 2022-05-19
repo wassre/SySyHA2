@@ -1,11 +1,38 @@
 {% extends 'todo/base.html' %}
-
-{% block title %}Home{% endblock %}
-
+<head>
+    {% block title %}Home{% endblock %}
+    {% block morestyle %}
+        table {
+        background-color: #FFFFFF;
+        border-collapse: collapse;
+        width: 100%;
+        border: thin solid gainsboro;
+        }
+        td, th {
+        text-align: left;
+        padding: 8px;
+        }
+        #colCheck { width: 0px }
+        #colProgress { width: 90px }
+        #colDate { width: 120px }
+        #colButtons { width: 87px }
+        th, caption {
+        background-color: #D8E7FD;
+        font-weight: 700;
+        }
+    {% endblock %}
+</head>
 {% block body %}
 <h1>ToDo-List</h1>
 <div>
     <table>
+        <colgroup>
+            <col id="colCheck">
+            <col>
+            <col id="colDate">
+            <col id="colProgress">
+            <col id="colButtons">
+        </colgroup>
         <tr>
             <th></th>
             <th>Todo</th>
