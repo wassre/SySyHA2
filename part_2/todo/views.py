@@ -39,3 +39,10 @@ def edit(request, id):
         if form.is_valid():
             form.save()
         return redirect('')
+
+def delete(request, pk):
+    list = Item.objects.get(id=pk)
+    if request.method == 'GET':
+        list.delete()
+        return redirect('/')
+    return render(request, '', {'item':list})
