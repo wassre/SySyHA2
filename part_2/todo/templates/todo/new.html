@@ -1,0 +1,28 @@
+{% extends 'todo/base.html' %}
+<head>
+    {% block title %}New ToDo{% endblock %}
+    {% block morestyle %}
+        p.con {
+        display: inline-block;
+        width: 50%;
+        float: left;
+        }
+        .btn-outline-primary {
+        border-color: black;
+        }
+    {% endblock %}
+</head>
+{% block body %}
+<h1>New Todo</h1>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<br>
+
+<div>
+    <form action="" method="POST" autocomplete="off">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button class="btn btn-outline-primary" type="submit" class="normalbtn">Todo speichern</button>
+    </form>
+</div>
+{% endblock %}
