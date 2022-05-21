@@ -41,8 +41,8 @@ def edit(request, id):
         return redirect('')
 
 def delete(request, pk):
-    list = Item.objects.get(id=pk)
+    item = Item.objects.get(id=pk)
     if request.method == 'GET':
-        list.delete()
+        item.delete()
         return redirect('/')
-    return render(request, '', {'item':list})
+    return render(request, '', {'item':item})
